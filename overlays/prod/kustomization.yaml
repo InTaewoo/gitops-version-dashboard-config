@@ -13,7 +13,7 @@ configMapGenerator:
 
 images:
   - name: gitops-version-dashboard
-    newName: REPLACE_WITH_AWS_ACCOUNT_ID.dkr.ecr.ap-northeast-2.amazonaws.com/gitops-version-dashboard
+    newName: 364928652637.dkr.ecr.ap-northeast-2.amazonaws.com/gitops-version-dashboard
     newTag: initial
 
 patches:
