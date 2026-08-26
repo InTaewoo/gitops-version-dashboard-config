@@ -8,10 +8,9 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    app.kubernetes.io/name: gitops-version-dashboard
+    app.kubernetes.io/part-of: gitops-version-dashboard
   ports:
     - name: http
       port: 80
       targetPort: http
       protocol: TCP
-

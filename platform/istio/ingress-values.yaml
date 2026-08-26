@@ -1,0 +1,32 @@
+replicaCount: 1
+
+labels:
+  istio: ingress
+
+service:
+  type: NodePort
+  ports:
+    - name: status-port
+      port: 15021
+      protocol: TCP
+      targetPort: 15021
+    - name: http2
+      port: 80
+      protocol: TCP
+      targetPort: 80
+      nodePort: 30081
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 443
+
+autoscaling:
+  enabled: false
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi

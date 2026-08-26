@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/InTaewoo/gitops-version-dashboard-config.git
-    targetRevision: main
+    targetRevision: master
     path: overlays/prod
   destination:
     server: https://kubernetes.default.svc
@@ -20,4 +20,5 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+      - PruneLast=true
   revisionHistoryLimit: 10

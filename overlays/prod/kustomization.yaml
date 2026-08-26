@@ -4,15 +4,22 @@ kind: Kustomization
 namespace: production
 
 resources:
+  - namespace.yaml
   - ../../base
+  - gateway.yaml
+  - destination-rule.yaml
+  - virtual-service.yaml
 
 configMapGenerator:
-  - name: dashboard-config
+  - name: dashboard-config-stable
+    envs:
+      - stable.env
+  - name: dashboard-config-canary
     envs:
       - app.env
 
 images:
-  - name: gitops-version-dashboard
+  - name: gitops-version-dashboard-canary
     newName: 364928652637.dkr.ecr.ap-northeast-2.amazonaws.com/gitops-version-dashboard
     newTag: bab1e54d
 

@@ -1,0 +1,23 @@
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+metadata:
+  name: gitops-version-dashboard
+spec:
+  hosts:
+    - "*"
+  gateways:
+    - dashboard-gateway
+  http:
+    - route:
+        - destination:
+            host: gitops-version-dashboard.production.svc.cluster.local
+            port:
+              number: 80
+            subset: v1
+          weight: 90
+        - destination:
+            host: gitops-version-dashboard.production.svc.cluster.local
+            port:
+              number: 80
+            subset: v2
+          weight: 10
