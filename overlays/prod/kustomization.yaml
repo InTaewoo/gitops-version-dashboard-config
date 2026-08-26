@@ -14,7 +14,7 @@ configMapGenerator:
 images:
   - name: gitops-version-dashboard
     newName: 364928652637.dkr.ecr.ap-northeast-2.amazonaws.com/gitops-version-dashboard
-    newTag: 492da801
+    newTag: bab1e54d
 
 patches:
   - path: service-patch.yaml
