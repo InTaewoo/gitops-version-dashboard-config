@@ -9,6 +9,7 @@ resources:
   - gateway.yaml
   - destination-rule.yaml
   - virtual-service.yaml
+  - peer-authentication.yaml
 
 configMapGenerator:
   - name: dashboard-config-stable
