@@ -22,7 +22,7 @@ configMapGenerator:
 images:
   - name: gitops-version-dashboard-canary
     newName: 364928652637.dkr.ecr.ap-northeast-2.amazonaws.com/gitops-version-dashboard
-    newTag: 91eafae9
+    newTag: fa3a5a8e
 
 patches:
   - path: service-patch.yaml
